@@ -1,0 +1,10 @@
+streamlit
+pandas
+geopandas
+matplotlib
+seaborn
+folium
+numpy
+branca
+streamlit-folium
+openpyxl 
