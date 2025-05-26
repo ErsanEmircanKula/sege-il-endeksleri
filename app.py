@@ -331,3 +331,19 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+# PDF dosyasını indirme butonu
+pdf_path = r"C:\Users\ersan\Desktop\RAPOR.pdf"
+
+try:
+    with open(pdf_path, "rb") as f:
+        pdf_bytes = f.read()
+    st.download_button(
+        label="📄 Detaylı rapor için tıklayınız",
+        data=pdf_bytes,
+        file_name="RAPOR.pdf",
+        mime="application/pdf",
+        key="download_pdf"
+    )
+except Exception as e:
+    st.error(f"PDF dosyası yüklenemedi: {e}")
